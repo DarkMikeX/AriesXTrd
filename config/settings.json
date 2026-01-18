@@ -1,0 +1,123 @@
+{
+  "trading": {
+    "auto_trading": false,
+    "min_confidence_threshold": 75,
+    "default_trade_amount": 5,
+    "max_trade_amount": 20,
+    "default_trade_duration": 5,
+    "supported_durations": [1, 2, 5, 15, 30, 60],
+    "max_daily_trades": 20,
+    "trading_enabled": true,
+    "preferred_assets": ["stocks", "forex"]
+  },
+  "risk_management": {
+    "daily_loss_limit": 50,
+    "daily_profit_target": 100,
+    "max_consecutive_losses": 3,
+    "max_trade_amount_percent": 5,
+    "cooling_period_minutes": 15,
+    "balance_check_enabled": true,
+    "minimum_balance_required": 10,
+    "stop_loss_enabled": true,
+    "take_profit_enabled": true
+  },
+  "notifications": {
+    "trade_confirmations": true,
+    "win_loss_alerts": true,
+    "daily_summary": true,
+    "signal_alerts": false,
+    "error_alerts": true,
+    "maintenance_alerts": true,
+    "telegram_notifications": true,
+    "email_notifications": false
+  },
+  "analysis": {
+    "indicators_enabled": {
+      "rsi": true,
+      "macd": true,
+      "bollinger_bands": true,
+      "ema": true,
+      "sma": true,
+      "stochastic": true,
+      "volume": true,
+      "atr": false
+    },
+    "signal_weights": {
+      "rsi": 1,
+      "macd": 2,
+      "bollinger_bands": 1,
+      "ema": 1,
+      "sma": 1,
+      "stochastic": 1,
+      "volume": 1
+    },
+    "min_signals_required": 5,
+    "max_confidence_score": 100,
+    "analysis_cache_enabled": true,
+    "cache_ttl_minutes": 5
+  },
+  "performance": {
+    "tracking_enabled": true,
+    "daily_reports": true,
+    "weekly_reports": true,
+    "monthly_reports": true,
+    "best_performers_tracking": true,
+    "win_rate_alerts": true,
+    "profit_alerts": true,
+    "statistics_reset": false
+  },
+  "user_interface": {
+    "language": "en",
+    "timezone": "America/New_York",
+    "currency": "USD",
+    "theme": "dark",
+    "compact_mode": false,
+    "show_charts": true,
+    "show_indicators": true
+  },
+  "automation": {
+    "auto_analyze": false,
+    "auto_analyze_interval": 60,
+    "auto_trade_signals": false,
+    "auto_trade_min_confidence": 85,
+    "scheduled_trading": false,
+    "trading_hours": {
+      "start": "09:00",
+      "end": "17:00",
+      "timezone": "America/New_York",
+      "days": ["monday", "tuesday", "wednesday", "thursday", "friday"]
+    }
+  },
+  "security": {
+    "two_factor_auth": false,
+    "session_timeout": 3600,
+    "max_login_attempts": 5,
+    "password_required": true,
+    "api_key_rotation": false,
+    "audit_logging": true
+  },
+  "data": {
+    "data_provider": "tradingview",
+    "backup_enabled": true,
+    "backup_interval": 24,
+    "data_retention_days": 365,
+    "export_formats": ["csv", "json", "pdf"]
+  },
+  "development": {
+    "debug_mode": false,
+    "test_mode": false,
+    "log_level": "info",
+    "performance_monitoring": true,
+    "error_reporting": true,
+    "maintenance_mode": false
+  },
+  "defaults": {
+    "new_user_settings": {
+      "auto_trading": false,
+      "min_confidence_threshold": 75,
+      "default_trade_amount": 5,
+      "notifications": true,
+      "language": "en"
+    }
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "bot": {
+    "name": "Trading Bot",
+    "username": "@YourTradingBot",
+    "description": "Advanced trading bot with technical analysis and automated execution",
+    "commands": [
+      {
+        "command": "start",
+        "description": "Start the trading bot"
+      },
+      {
+        "command": "help",
+        "description": "Show available commands"
+      },
+      {
+        "command": "analyze",
+        "description": "Analyze a trading asset (e.g., /analyze AAPL)"
+      },
+      {
+        "command": "stats",
+        "description": "View trading statistics and performance"
+      },
+      {
+        "command": "balance",
+        "description": "Check account balance"
+      },
+      {
+        "command": "history",
+        "description": "View trade history"
+      },
+      {
+        "command": "settings",
+        "description": "Configure bot settings"
+      },
+      {
+        "command": "stop",
+        "description": "Emergency stop all trading"
+      }
+    ]
+  },
+  "messages": {
+    "welcome": "👋 Welcome to Trading Bot!\n\nI analyze stocks, forex & crypto using 7 technical indicators to give you high-accuracy signals.\n\nChoose what you want to trade:",
+    "analyzing": "⏳ Analyzing {asset}...\nFetching real-time data from TradingView...\nCalculating 7 technical indicators...\nGenerating signal...",
+    "analysis_complete": "📊 {asset} ANALYSIS COMPLETE\n\n💰 Current Price: ${price}\n\n📈 TECHNICAL INDICATORS:\n├─ RSI (14): {rsi} {rsi_signal}\n├─ MACD: {macd_signal}\n├─ Bollinger: {bollinger_signal}\n├─ 50 EMA: {ema_signal}\n├─ 200 SMA: {sma_signal}\n├─ Stochastic: {stochastic} {stoch_signal}\n└─ Volume: {volume_signal}\n\n🎯 SIGNAL: {signal} ({type})\n📊 Confidence: {confidence}%\n⭐ Quality: {quality}\n\n💡 RECOMMENDED TRADE:\nDirection: {type} (Price will go {direction})\nAmount: ${amount}\nDuration: {duration} minutes\nPotential Profit: ${profit} ({payout}% payout)",
+    "trade_executed": "✅ TRADE EXECUTED SUCCESSFULLY!\n\n📍 Asset: {asset}\n🎯 Type: Binary Option - {type}\n💵 Investment: ${amount}\n📊 Entry Price: ${entry_price}\n⏰ Entry Time: {entry_time}\n⌛ Expiry Time: {expiry_time} ({duration} min)\n💰 Potential Profit: ${profit}\n\n🔔 I'll monitor this trade and notify you when it closes!\n\n📊 Current Open Positions: {open_positions}\n💼 Today's Trades: {today_trades}",
+    "trade_win": "🎉 TRADE CLOSED - YOU WON! 🎉\n\n📍 Asset: {asset}\n🎯 Direction: {type} ✅\n\n💵 Investment: ${amount}\n📈 Entry Price: ${entry_price}\n📉 Exit Price: ${exit_price}\n📊 Movement: {movement}\n\n💰 PROFIT: +${profit}\n💼 New Balance: ${balance}",
+    "trade_loss": "❌ TRADE CLOSED - LOSS ❌\n\n📍 Asset: {asset}\n🎯 Direction: {type} ❌\n\n💵 Investment: ${amount}\n📈 Entry Price: ${entry_price}\n📉 Exit Price: ${exit_price}\n📊 Movement: {movement}\n\n💸 LOSS: -${loss}\n💼 New Balance: ${balance}",
+    "stats_summary": "📊 COMPREHENSIVE TRADING STATISTICS\n\n━━━━━━━━━━━━━━━━━━━━━━━━\n📅 TODAY\n━━━━━━━━━━━━━━━━━━━━━━━━\nTotal Trades: {total_trades}\nWins: {wins} ({win_rate}%)\nLosses: {losses}\nProfit: {profit}\nROI: {roi}%\nBest Asset: {best_asset}\n\n━━━━━━━━━━━━━━━━━━━━━━━━\n📅 THIS WEEK\n━━━━━━━━━━━━━━━━━━━━━━━━\nTotal Trades: {week_trades}\nWins: {week_wins} ({week_win_rate}%)\nProfit: {week_profit}\nAvg Trade: ${avg_trade}\n\n━━━━━━━━━━━━━━━━━━━━━━━━\n📅 THIS MONTH\n━━━━━━━━━━━━━━━━━━━━━━━━\nTotal Trades: {month_trades}\nWin Rate: {month_win_rate}%\nTotal Profit: {month_profit}\nBest Day: {best_day}",
+    "error": "❌ Error: {message}",
+    "maintenance": "🔧 Bot is currently under maintenance. Please try again later.",
+    "insufficient_balance": "💰 Insufficient balance. Current balance: ${balance}",
+    "daily_limit_reached": "⚠️ Daily trade limit reached ({limit} trades). Trading paused.",
+    "risk_limit_reached": "⚠️ Risk management: Daily loss limit reached (${limit}). Trading stopped for safety.",
+    "consecutive_losses": "⚠️ Risk management: {losses} consecutive losses. Cooling period activated."
+  },
+  "keyboards": {
+    "main_menu": {
+      "inline_keyboard": [
+        [
+          {"text": "📱 Stocks", "callback_data": "menu_stocks"},
+          {"text": "💱 Forex", "callback_data": "menu_forex"}
+        ],
+        [
+          {"text": "🪙 Crypto", "callback_data": "menu_crypto"},
+          {"text": "📊 My Stats", "callback_data": "menu_stats"}
+        ],
+        [
+          {"text": "⚙️ Settings", "callback_data": "menu_settings"}
+        ]
+      ]
+    },
+    "trade_actions": {
+      "inline_keyboard": [
+        [
+          {"text": "✅ Execute $5", "callback_data": "trade_5"},
+          {"text": "💰 Execute $10", "callback_data": "trade_10"}
+        ],
+        [
+          {"text": "💵 Custom Amount", "callback_data": "trade_custom"},
+          {"text": "📊 View Chart", "callback_data": "view_chart"}
+        ],
+        [
+          {"text": "🔄 Re-analyze", "callback_data": "reanalyze"},
+          {"text": "❌ Cancel", "callback_data": "cancel"}
+        ]
+      ]
+    }
+  },
+  "admin": {
+    "admin_only": "❌ This command is only available to administrators.",
+    "broadcast_sent": "✅ Broadcast message sent to {count} users.",
+    "stats_reset": "✅ Statistics reset successfully.",
+    "maintenance_mode": "🔧 Maintenance mode {status}."
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "name": "telegram-trading-bot",
+  "version": "1.0.0",
+  "description": "Advanced Telegram Trading Bot with IQ Option automation and technical analysis",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
+    "test": "jest",
+    "setup": "node scripts/setup.js",
+    "migrate": "node scripts/migrate.js",
+    "create-bot": "node scripts/createBot.js",
+    "lint": "eslint src/**/*.js",
+    "format": "prettier --write src/**/*.js",
+    "docker:build": "docker build -t trading-bot .",
+    "docker:run": "docker run -d --name trading-bot trading-bot"
+  },
+  "keywords": [
+    "trading",
+    "telegram",
+    "bot",
+    "iq-option",
+    "technical-analysis",
+    "automation",
+    "forex",
+    "stocks",
+    "crypto"
+  ],
+  "author": "Trading Bot Team",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "dependencies": {
+    "telegraf": "^4.12.2",
+    "sequelize": "^6.32.1",
+    "sqlite3": "^5.1.6",
+    "puppeteer": "^21.0.0",
+    "winston": "^3.8.2",
+    "axios": "^1.4.0",
+    "ws": "^8.13.0",
+    "moment-timezone": "^0.5.43",
+    "fs-extra": "^11.1.1",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "helmet": "^7.0.0",
+    "compression": "^1.7.4",
+    "rate-limiter-flexible": "^3.0.4",
+    "node-cron": "^3.0.3",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "jest": "^29.6.2",
+    "eslint": "^8.45.0",
+    "prettier": "^3.0.2",
+    "supertest": "^6.3.3",
+    "jest-environment-node": "^29.6.2"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/**/*.test.js"
+    ],
+    "coverageDirectory": "coverage",
+    "coverageReporters": [
+      "text",
+      "lcov",
+      "html"
+    ],
+    "testMatch": [
+      "**/__tests__/**/*.test.js",
+      "**/?(*.)+(spec|test).js"
+    ]
+  },
+  "eslintConfig": {
+    "env": {
+      "node": true,
+      "es2022": true
+    },
+    "extends": [
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "ecmaVersion": "latest"
+    },
+    "rules": {
+      "no-unused-vars": "warn",
+      "no-console": "off",
+      "prefer-const": "error",
+      "no-var": "error"
+    }
+  },
+  "prettier": {
+    "semi": true,
+    "trailingComma": "es5",
+    "singleQuote": true,
+    "printWidth": 100,
+    "tabWidth": 2
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/telegram-trading-bot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/telegram-trading-bot/issues"
+  },
+  "homepage": "https://github.com/your-username/telegram-trading-bot#readme",
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  }
+}

@@ -1,0 +1,346 @@
+{
+  "stocks": {
+    "AAPL": {
+      "name": "Apple Inc.",
+      "symbol": "AAPL",
+      "exchange": "NASDAQ",
+      "tradingview_symbol": "NASDAQ:AAPL",
+      "category": "technology",
+      "enabled": true,
+      "volatility": "medium",
+      "average_volume": 50000000,
+      "trading_hours": "09:30-16:00 EST"
+    },
+    "TSLA": {
+      "name": "Tesla Inc.",
+      "symbol": "TSLA",
+      "exchange": "NASDAQ",
+      "tradingview_symbol": "NASDAQ:TSLA",
+      "category": "automotive",
+      "enabled": true,
+      "volatility": "high",
+      "average_volume": 30000000,
+      "trading_hours": "09:30-16:00 EST"
+    },
+    "MSFT": {
+      "name": "Microsoft Corporation",
+      "symbol": "MSFT",
+      "exchange": "NASDAQ",
+      "tradingview_symbol": "NASDAQ:MSFT",
+      "category": "technology",
+      "enabled": true,
+      "volatility": "medium",
+      "average_volume": 25000000,
+      "trading_hours": "09:30-16:00 EST"
+    },
+    "AMZN": {
+      "name": "Amazon.com Inc.",
+      "symbol": "AMZN",
+      "exchange": "NASDAQ",
+      "tradingview_symbol": "NASDAQ:AMZN",
+      "category": "ecommerce",
+      "enabled": true,
+      "volatility": "medium",
+      "average_volume": 30000000,
+      "trading_hours": "09:30-16:00 EST"
+    },
+    "GOOGL": {
+      "name": "Alphabet Inc.",
+      "symbol": "GOOGL",
+      "exchange": "NASDAQ",
+      "tradingview_symbol": "NASDAQ:GOOGL",
+      "category": "technology",
+      "enabled": true,
+      "volatility": "medium",
+      "average_volume": 20000000,
+      "trading_hours": "09:30-16:00 EST"
+    },
+    "NVDA": {
+      "name": "NVIDIA Corporation",
+      "symbol": "NVDA",
+      "exchange": "NASDAQ",
+      "tradingview_symbol": "NASDAQ:NVDA",
+      "category": "technology",
+      "enabled": true,
+      "volatility": "high",
+      "average_volume": 40000000,
+      "trading_hours": "09:30-16:00 EST"
+    },
+    "META": {
+      "name": "Meta Platforms Inc.",
+      "symbol": "META",
+      "exchange": "NASDAQ",
+      "tradingview_symbol": "NASDAQ:META",
+      "category": "technology",
+      "enabled": true,
+      "volatility": "medium",
+      "average_volume": 15000000,
+      "trading_hours": "09:30-16:00 EST"
+    },
+    "NFLX": {
+      "name": "Netflix Inc.",
+      "symbol": "NFLX",
+      "exchange": "NASDAQ",
+      "tradingview_symbol": "NASDAQ:NFLX",
+      "category": "entertainment",
+      "enabled": true,
+      "volatility": "medium",
+      "average_volume": 8000000,
+      "trading_hours": "09:30-16:00 EST"
+    },
+    "AMD": {
+      "name": "Advanced Micro Devices",
+      "symbol": "AMD",
+      "exchange": "NASDAQ",
+      "tradingview_symbol": "NASDAQ:AMD",
+      "category": "technology",
+      "enabled": true,
+      "volatility": "high",
+      "average_volume": 35000000,
+      "trading_hours": "09:30-16:00 EST"
+    },
+    "SPY": {
+      "name": "SPDR S&P 500 ETF",
+      "symbol": "SPY",
+      "exchange": "AMEX",
+      "tradingview_symbol": "AMEX:SPY",
+      "category": "index",
+      "enabled": true,
+      "volatility": "low",
+      "average_volume": 60000000,
+      "trading_hours": "09:30-16:00 EST"
+    }
+  },
+  "forex": {
+    "EURUSD": {
+      "name": "Euro vs US Dollar",
+      "symbol": "EURUSD",
+      "tradingview_symbol": "FX:EURUSD",
+      "category": "major",
+      "enabled": true,
+      "volatility": "low",
+      "spread": 0.0001,
+      "trading_hours": "24/7"
+    },
+    "GBPUSD": {
+      "name": "British Pound vs US Dollar",
+      "symbol": "GBPUSD",
+      "tradingview_symbol": "FX:GBPUSD",
+      "category": "major",
+      "enabled": true,
+      "volatility": "medium",
+      "spread": 0.0002,
+      "trading_hours": "24/7"
+    },
+    "USDJPY": {
+      "name": "US Dollar vs Japanese Yen",
+      "symbol": "USDJPY",
+      "tradingview_symbol": "FX:USDJPY",
+      "category": "major",
+      "enabled": true,
+      "volatility": "medium",
+      "spread": 0.01,
+      "trading_hours": "24/7"
+    },
+    "USDCHF": {
+      "name": "US Dollar vs Swiss Franc",
+      "symbol": "USDCHF",
+      "tradingview_symbol": "FX:USDCHF",
+      "category": "major",
+      "enabled": true,
+      "volatility": "low",
+      "spread": 0.0001,
+      "trading_hours": "24/7"
+    },
+    "AUDUSD": {
+      "name": "Australian Dollar vs US Dollar",
+      "symbol": "AUDUSD",
+      "tradingview_symbol": "FX:AUDUSD",
+      "category": "major",
+      "enabled": true,
+      "volatility": "medium",
+      "spread": 0.0001,
+      "trading_hours": "24/7"
+    },
+    "USDCAD": {
+      "name": "US Dollar vs Canadian Dollar",
+      "symbol": "USDCAD",
+      "tradingview_symbol": "FX:USDCAD",
+      "category": "major",
+      "enabled": true,
+      "volatility": "low",
+      "spread": 0.0001,
+      "trading_hours": "24/7"
+    },
+    "NZDUSD": {
+      "name": "New Zealand Dollar vs US Dollar",
+      "symbol": "NZDUSD",
+      "tradingview_symbol": "FX:NZDUSD",
+      "category": "minor",
+      "enabled": true,
+      "volatility": "medium",
+      "spread": 0.0001,
+      "trading_hours": "24/7"
+    },
+    "EURJPY": {
+      "name": "Euro vs Japanese Yen",
+      "symbol": "EURJPY",
+      "tradingview_symbol": "FX:EURJPY",
+      "category": "cross",
+      "enabled": true,
+      "volatility": "medium",
+      "spread": 0.01,
+      "trading_hours": "24/7"
+    },
+    "GBPJPY": {
+      "name": "British Pound vs Japanese Yen",
+      "symbol": "GBPJPY",
+      "tradingview_symbol": "FX:GBPJPY",
+      "category": "cross",
+      "enabled": true,
+      "volatility": "high",
+      "spread": 0.01,
+      "trading_hours": "24/7"
+    },
+    "EURGBP": {
+      "name": "Euro vs British Pound",
+      "symbol": "EURGBP",
+      "tradingview_symbol": "FX:EURGBP",
+      "category": "cross",
+      "enabled": true,
+      "volatility": "medium",
+      "spread": 0.0001,
+      "trading_hours": "24/7"
+    }
+  },
+  "crypto": {
+    "BTCUSD": {
+      "name": "Bitcoin vs US Dollar",
+      "symbol": "BTCUSD",
+      "tradingview_symbol": "BINANCE:BTCUSDT",
+      "category": "major",
+      "enabled": true,
+      "volatility": "high",
+      "trading_hours": "24/7"
+    },
+    "ETHUSD": {
+      "name": "Ethereum vs US Dollar",
+      "symbol": "ETHUSD",
+      "tradingview_symbol": "BINANCE:ETHUSDT",
+      "category": "major",
+      "enabled": true,
+      "volatility": "high",
+      "trading_hours": "24/7"
+    },
+    "BNBUSD": {
+      "name": "Binance Coin vs US Dollar",
+      "symbol": "BNBUSD",
+      "tradingview_symbol": "BINANCE:BNBUSDT",
+      "category": "major",
+      "enabled": true,
+      "volatility": "high",
+      "trading_hours": "24/7"
+    },
+    "ADAUSD": {
+      "name": "Cardano vs US Dollar",
+      "symbol": "ADAUSD",
+      "tradingview_symbol": "BINANCE:ADAUSDT",
+      "category": "altcoin",
+      "enabled": true,
+      "volatility": "high",
+      "trading_hours": "24/7"
+    },
+    "SOLUSD": {
+      "name": "Solana vs US Dollar",
+      "symbol": "SOLUSD",
+      "tradingview_symbol": "BINANCE:SOLUSDT",
+      "category": "altcoin",
+      "enabled": true,
+      "volatility": "high",
+      "trading_hours": "24/7"
+    },
+    "DOTUSD": {
+      "name": "Polkadot vs US Dollar",
+      "symbol": "DOTUSD",
+      "tradingview_symbol": "BINANCE:DOTUSDT",
+      "category": "altcoin",
+      "enabled": true,
+      "volatility": "high",
+      "trading_hours": "24/7"
+    },
+    "DOGEUSD": {
+      "name": "Dogecoin vs US Dollar",
+      "symbol": "DOGEUSD",
+      "tradingview_symbol": "BINANCE:DOGEUSDT",
+      "category": "altcoin",
+      "enabled": true,
+      "volatility": "high",
+      "trading_hours": "24/7"
+    },
+    "AVAXUSD": {
+      "name": "Avalanche vs US Dollar",
+      "symbol": "AVAXUSD",
+      "tradingview_symbol": "BINANCE:AVAXUSDT",
+      "category": "altcoin",
+      "enabled": true,
+      "volatility": "high",
+      "trading_hours": "24/7"
+    },
+    "LTCUSD": {
+      "name": "Litecoin vs US Dollar",
+      "symbol": "LTCUSD",
+      "tradingview_symbol": "BINANCE:LTCUSDT",
+      "category": "major",
+      "enabled": true,
+      "volatility": "high",
+      "trading_hours": "24/7"
+    },
+    "LINKUSD": {
+      "name": "Chainlink vs US Dollar",
+      "symbol": "LINKUSD",
+      "tradingview_symbol": "BINANCE:LINKUSDT",
+      "category": "altcoin",
+      "enabled": true,
+      "volatility": "high",
+      "trading_hours": "24/7"
+    }
+  },
+  "categories": {
+    "popular": {
+      "stocks": ["AAPL", "TSLA", "MSFT", "AMZN", "GOOGL", "NVDA"],
+      "forex": ["EURUSD", "GBPUSD", "USDJPY", "USDCHF", "AUDUSD"],
+      "crypto": ["BTCUSD", "ETHUSD", "BNBUSD"]
+    },
+    "volatile": {
+      "stocks": ["TSLA", "NVDA", "AMD"],
+      "forex": ["GBPUSD", "AUDUSD", "NZDUSD"],
+      "crypto": ["BTCUSD", "ETHUSD", "SOLUSD"]
+    },
+    "conservative": {
+      "stocks": ["MSFT", "GOOGL", "SPY"],
+      "forex": ["EURUSD", "USDCHF", "USDCAD"],
+      "crypto": []
+    }
+  },
+  "market_status": {
+    "stocks": {
+      "timezone": "America/New_York",
+      "open": "09:30",
+      "close": "16:00",
+      "lunch_break": false,
+      "holidays": ["2024-01-01", "2024-01-15", "2024-02-19", "2024-03-29", "2024-05-27", "2024-07-04", "2024-09-02", "2024-11-28", "2024-12-25"]
+    },
+    "forex": {
+      "timezone": "UTC",
+      "open": "00:00",
+      "close": "23:59",
+      "weekends": false
+    },
+    "crypto": {
+      "timezone": "UTC",
+      "open": "00:00",
+      "close": "23:59",
+      "weekends": true
+    }
+  }
+}

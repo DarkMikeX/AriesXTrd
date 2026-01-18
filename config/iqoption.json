@@ -1,0 +1,154 @@
+{
+  "platform": {
+    "name": "IQ Option",
+    "website": "https://iqoption.com",
+    "login_url": "https://iqoption.com/en/login",
+    "api_url": "https://iqoption.com/api",
+    "websocket_url": "wss://iqoption.com/api/ws",
+    "timeout": 30000,
+    "retry_attempts": 3,
+    "retry_delay": 2000
+  },
+  "automation": {
+    "browser": {
+      "headless": true,
+      "args": [
+        "--no-sandbox",
+        "--disable-setuid-sandbox",
+        "--disable-dev-shm-usage",
+        "--disable-accelerated-2d-canvas",
+        "--no-first-run",
+        "--no-zygote",
+        "--single-process",
+        "--disable-gpu",
+        "--disable-web-security",
+        "--disable-features=VizDisplayCompositor"
+      ],
+      "default_viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+    },
+    "selectors": {
+      "login": {
+        "email_input": "input[type='email'], input[name='email']",
+        "password_input": "input[type='password'], input[name='password']",
+        "login_button": "button[type='submit'], .login-button",
+        "error_message": ".error-message, .login-error"
+      },
+      "dashboard": {
+        "balance": ".balance, .account-balance, [data-testid='balance']",
+        "asset_search": "input[placeholder*='Search'], .asset-search",
+        "asset_list": ".asset-list, .instruments-list",
+        "asset_item": ".asset-item, .instrument-item"
+      },
+      "trading": {
+        "binary_options_tab": "[data-testid='binary-options'], .binary-tab",
+        "call_button": "[data-testid='call'], .call-button, button[class*='call']",
+        "put_button": "[data-testid='put'], .put-button, button[class*='put']",
+        "amount_input": "input[type='number'], .amount-input",
+        "duration_select": "select, .duration-select",
+        "apply_button": ".apply-button, [data-testid='apply']",
+        "confirm_button": ".confirm-button, [data-testid='confirm']"
+      },
+      "positions": {
+        "open_positions": ".open-positions, .active-trades",
+        "position_item": ".position-item, .trade-item",
+        "close_position": ".close-button, [data-testid='close']"
+      }
+    },
+    "timeouts": {
+      "page_load": 15000,
+      "element_wait": 10000,
+      "login_wait": 20000,
+      "trade_execution": 30000
+    }
+  },
+  "trading": {
+    "supported_types": ["binary", "digital"],
+    "default_type": "binary",
+    "durations": [1, 2, 5, 15, 30, 60],
+    "default_duration": 5,
+    "amounts": [1, 2, 5, 10, 25, 50, 100],
+    "default_amount": 5,
+    "max_amount": 100,
+    "min_amount": 1,
+    "payout_rates": {
+      "binary": 0.75,
+      "digital": 0.85
+    }
+  },
+  "assets": {
+    "stocks": {
+      "AAPL": "Apple Inc.",
+      "TSLA": "Tesla Inc.",
+      "MSFT": "Microsoft Corporation",
+      "AMZN": "Amazon.com Inc.",
+      "GOOGL": "Alphabet Inc.",
+      "NVDA": "NVIDIA Corporation",
+      "META": "Meta Platforms Inc.",
+      "NFLX": "Netflix Inc.",
+      "AMD": "Advanced Micro Devices",
+      "INTC": "Intel Corporation"
+    },
+    "forex": {
+      "EURUSD": "Euro vs US Dollar",
+      "GBPUSD": "British Pound vs US Dollar",
+      "USDJPY": "US Dollar vs Japanese Yen",
+      "USDCHF": "US Dollar vs Swiss Franc",
+      "AUDUSD": "Australian Dollar vs US Dollar",
+      "USDCAD": "US Dollar vs Canadian Dollar",
+      "NZDUSD": "New Zealand Dollar vs US Dollar",
+      "EURJPY": "Euro vs Japanese Yen",
+      "GBPJPY": "British Pound vs Japanese Yen",
+      "EURGBP": "Euro vs British Pound"
+    },
+    "crypto": {
+      "BTCUSD": "Bitcoin vs US Dollar",
+      "ETHUSD": "Ethereum vs US Dollar",
+      "BNBUSD": "Binance Coin vs US Dollar",
+      "ADAUSD": "Cardano vs US Dollar",
+      "SOLUSD": "Solana vs US Dollar",
+      "DOTUSD": "Polkadot vs US Dollar",
+      "DOGEUSD": "Dogecoin vs US Dollar",
+      "AVAXUSD": "Avalanche vs US Dollar",
+      "LTCUSD": "Litecoin vs US Dollar",
+      "LINKUSD": "Chainlink vs US Dollar"
+    },
+    "commodities": {
+      "XAUUSD": "Gold vs US Dollar",
+      "XAGUSD": "Silver vs US Dollar"
+    }
+  },
+  "risk_management": {
+    "max_daily_trades": 20,
+    "max_consecutive_losses": 3,
+    "daily_loss_limit": 50,
+    "daily_profit_target": 100,
+    "max_trade_amount": 20,
+    "cooling_period_minutes": 15,
+    "balance_check_required": true,
+    "minimum_balance": 10
+  },
+  "monitoring": {
+    "screenshot_on_trade": true,
+    "screenshot_directory": "./screenshots",
+    "log_trades": true,
+    "log_directory": "./logs",
+    "performance_tracking": true,
+    "error_reporting": true
+  },
+  "sessions": {
+    "max_sessions": 5,
+    "session_timeout": 3600000,
+    "auto_logout": true,
+    "remember_login": false
+  },
+  "development": {
+    "debug_mode": false,
+    "test_mode": false,
+    "mock_trades": false,
+    "skip_login": false
+  }
+}

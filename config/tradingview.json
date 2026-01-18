@@ -1,0 +1,146 @@
+{
+  "api": {
+    "base_url": "https://api.tradingview.com",
+    "websocket_url": "wss://data.tradingview.com",
+    "chart_url": "https://www.tradingview.com/api/v1/chart",
+    "timeout": 30000,
+    "retry_attempts": 3,
+    "retry_delay": 1000
+  },
+  "data": {
+    "default_timeframe": "1D",
+    "default_bars_count": 100,
+    "supported_timeframes": ["1m", "5m", "15m", "30m", "1H", "4H", "1D", "1W", "1M"],
+    "max_bars_request": 5000,
+    "cache_enabled": true,
+    "cache_ttl": 300000
+  },
+  "indicators": {
+    "rsi": {
+      "period": 14,
+      "overbought": 70,
+      "oversold": 30
+    },
+    "macd": {
+      "fast_period": 12,
+      "slow_period": 26,
+      "signal_period": 9
+    },
+    "bollinger_bands": {
+      "period": 20,
+      "standard_deviation": 2
+    },
+    "ema": {
+      "periods": [20, 50, 200]
+    },
+    "sma": {
+      "periods": [50, 100, 200]
+    },
+    "stochastic": {
+      "k_period": 14,
+      "d_period": 3,
+      "overbought": 80,
+      "oversold": 20
+    },
+    "atr": {
+      "period": 14
+    }
+  },
+  "assets": {
+    "stocks": {
+      "AAPL": "NASDAQ:AAPL",
+      "TSLA": "NASDAQ:TSLA",
+      "MSFT": "NASDAQ:MSFT",
+      "AMZN": "NASDAQ:AMZN",
+      "GOOGL": "NASDAQ:GOOGL",
+      "NVDA": "NASDAQ:NVDA",
+      "META": "NASDAQ:META",
+      "NFLX": "NASDAQ:NFLX",
+      "AMD": "NASDAQ:AMD",
+      "INTC": "NASDAQ:INTC",
+      "SPY": "AMEX:SPY",
+      "QQQ": "NASDAQ:QQQ"
+    },
+    "forex": {
+      "EURUSD": "FX:EURUSD",
+      "GBPUSD": "FX:GBPUSD",
+      "USDJPY": "FX:USDJPY",
+      "USDCHF": "FX:USDCHF",
+      "AUDUSD": "FX:AUDUSD",
+      "USDCAD": "FX:USDCAD",
+      "NZDUSD": "FX:NZDUSD",
+      "EURJPY": "FX:EURJPY",
+      "GBPJPY": "FX:GBPJPY",
+      "EURGBP": "FX:EURGBP"
+    },
+    "crypto": {
+      "BTCUSD": "BINANCE:BTCUSDT",
+      "ETHUSD": "BINANCE:ETHUSDT",
+      "BNBUSD": "BINANCE:BNBUSDT",
+      "ADAUSD": "BINANCE:ADAUSDT",
+      "SOLUSD": "BINANCE:SOLUSDT",
+      "DOTUSD": "BINANCE:DOTUSDT",
+      "DOGEUSD": "BINANCE:DOGEUSDT",
+      "AVAXUSD": "BINANCE:AVAXUSDT",
+      "LTCUSD": "BINANCE:LTCUSDT",
+      "LINKUSD": "BINANCE:LINKUSDT"
+    },
+    "commodities": {
+      "XAUUSD": "FX:XAUUSD",
+      "XAGUSD": "FX:XAGUSD",
+      "WTI": "NYMEX:CL1!",
+      "BRENT": "ICE:BRN1!"
+    },
+    "indices": {
+      "SPX": "SP:SPX",
+      "NDX": "NASDAQ:NDX",
+      "DAX": "XETR:DAX",
+      "FTSE": "LSE:FTSE",
+      "NIKKEI": "TSE:NI225"
+    }
+  },
+  "categories": {
+    "popular_stocks": ["AAPL", "TSLA", "MSFT", "AMZN", "GOOGL", "NVDA"],
+    "popular_forex": ["EURUSD", "GBPUSD", "USDJPY", "USDCHF", "AUDUSD"],
+    "popular_crypto": ["BTCUSD", "ETHUSD", "BNBUSD", "ADAUSD", "SOLUSD"],
+    "tech_stocks": ["AAPL", "MSFT", "GOOGL", "NVDA", "AMD", "TSLA"],
+    "volatile_assets": ["TSLA", "BTCUSD", "ETHUSD", "SOLUSD", "GBPUSD"]
+  },
+  "market_hours": {
+    "stocks": {
+      "us": {
+        "timezone": "America/New_York",
+        "open": "09:30",
+        "close": "16:00",
+        "days": ["monday", "tuesday", "wednesday", "thursday", "friday"]
+      },
+      "eu": {
+        "timezone": "Europe/London",
+        "open": "08:00",
+        "close": "16:30",
+        "days": ["monday", "tuesday", "wednesday", "thursday", "friday"]
+      }
+    },
+    "forex": {
+      "session": "24/7",
+      "timezone": "UTC"
+    },
+    "crypto": {
+      "session": "24/7",
+      "timezone": "UTC"
+    }
+  },
+  "alerts": {
+    "price_alerts": true,
+    "volume_alerts": true,
+    "technical_alerts": true,
+    "news_alerts": false
+  },
+  "charts": {
+    "default_theme": "dark",
+    "width": 800,
+    "height": 600,
+    "indicators": ["rsi", "macd", "bollinger", "ema", "sma"],
+    "studies": ["volume", "stochastic"]
+  }
+}
