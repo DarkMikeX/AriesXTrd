@@ -1,0 +1,20 @@
+﻿name: Mirror to '"$NEW_USERNAME"'
+on:
+  push:
+    branches:
+      - main
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Push to '"$NEW_USERNAME"'
+        env:
+          TOKEN: ${{ secrets.GAURAV_TOKEN }}
+        run: |
+          git remote add mirror https://$TOKEN@github.com/'"$NEW_USERNAME"'/'"$repo"'.git
+          git push mirror --all
+          git push mirror --tags
